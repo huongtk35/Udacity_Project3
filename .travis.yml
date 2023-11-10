@@ -12,14 +12,14 @@ script:
 ## Build
   - docker-compose -f docker-compose-build.yaml build
 ## Tagging
-  - docker tag udagram-api-feed hungnh52/udagram-api-feed:latest
-  - docker tag udagram-api-user hungnh52/udagram-api-user:latest
-  - docker tag udagram-frontend hungnh52/udagram-frontend:latest
-  - docker tag reverseproxy hungnh52/reverseproxy:latest
+  - docker tag udagram-api-feed huongtk35/udagram-api-feed:latest
+  - docker tag udagram-api-user huongtk35/udagram-api-user:latest
+  - docker tag udagram-frontend huongtk35/udagram-frontend:latest
+  - docker tag reverseproxy huongtk35/reverseproxy:latest
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 ## Push
-  - docker push hungnh52/udagram-api-feed
-  - docker push hungnh52/udagram-api-user
-  - docker push hungnh52/udagram-frontend
-  - docker push hungnh52/reverseproxy
+  - docker push huongtk35/udagram-api-feed
+  - docker push huongtk35/udagram-api-user
+  - docker push huongtk35/udagram-frontend
+  - docker push huongtk35/reverseproxy
