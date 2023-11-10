@@ -24,8 +24,12 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
   // worry about the complexities of CORS this lesson. It's
   // something that will be covered in the next course.
   app.use(cors({
-
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: [
+      'Origin', 'X-Requested-With',
+      'Content-Type', 'Accept',
+      'X-Access-Token', 'Authorization',
+    ],
+    methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
     preflightContinue: true,
     origin: '*',
   }));

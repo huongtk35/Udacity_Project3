@@ -1,5 +1,5 @@
 {
-  "name": "udagram-api-feed",
+  "name": "udagram-api",
   "version": "2.0.0",
   "description": "",
   "main": "src/server.js",
