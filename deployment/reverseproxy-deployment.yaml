@@ -16,7 +16,7 @@ spec:
       name: backend-user
     spec:
       containers:
-      - image: huongtk35/reverseproxy:v1
+      - image: huongtk35/udagram-reverseproxy:v1
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
